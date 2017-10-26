@@ -1,0 +1,9 @@
+#version 150
+
+out vec4 finalColor;
+in vec4 in_color;
+
+void main() {
+    finalColor = in_color;
+	finalColor = finalColor*mat4(1.1f);
+}

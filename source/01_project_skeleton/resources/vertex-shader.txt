@@ -1,0 +1,23 @@
+#version 150
+
+in vec4 color;
+in vec3 vect;
+
+out vec4 in_color;
+
+void main() {
+
+    vec4 tt = color;
+   
+    vec3 tem = vect;
+
+	if(tem[0]>-0.2 && tem[0] < -0.1){
+	    tt[0] = 1;
+		tt[1] = 1;
+		tt[2] = 1;
+	}
+
+	in_color = tt;
+
+	gl_Position = vec4(tem, 1);
+}
